@@ -1,0 +1,11 @@
+//Add reference to windows\system32\wmp.dll
+using WMPLib;
+class playmp3
+{
+  WindowsMediaPlayer wplayer = new WindowsMediaPlayer();
+  public playmp3(string filepath)
+  {
+    wplayer.URL = filepath; // the mp3 file e.g. C:\myfile.mp3
+    wplayer.controls.play();
+  }
+}
